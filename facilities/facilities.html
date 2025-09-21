@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facilities - Residential Polytechnic Institute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/android-chrome-192x192.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background-color: #004c97;
+      color: #fff;
+      padding: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 15px;
+      /* font-weight: 100; */
+      transition: 0.3s;
+      border-radius: 5px;
+      font-style: italic;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      background-color: #003366;
+    }
+
+
+.nav-links a.active {
+  background-color: #ffcc00; /* Highlight color */
+  color: #004c97; /* Text color */
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+    
+
+    /* ===== Facilities Section ===== */
+    .facilities {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .facilities h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #004c97;
+      font-weight: 700;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .facilities h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #004c97, #1e90ff);
+      margin: 15px auto 0;
+      border-radius: 4px;
+    }
+
+    .facilities-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .facility-card {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.facility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.facility-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #004c97, #1e90ff);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.facility-card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.facility-card h3 {
+  margin: 0;
+  color: #004c97;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+    
+
+    @media (max-width: 768px) {
+      .facilities h2 {
+        font-size: 2rem;
+      }
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background: #004c97;
+      color: #fff;
+      padding: 60px 20px 20px;
+    }
+
+    .site-footer a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .site-footer a:hover {
+      color: #ffcc00;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-brand h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-links h3,
+    .footer-contact h3,
+    .footer-newsletter h3 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #ffcc00;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-contact p {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .footer-newsletter form {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    .footer-newsletter input[type="email"] {
+      flex: 1;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px 0 0 6px;
+      outline: none;
+    }
+
+    .footer-newsletter button {
+      padding: 10px 20px;
+      border: none;
+      background: #ffcc00;
+      color: #004c97;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 0 6px 6px 0;
+      transition: background 0.3s;
+    }
+
+    .footer-newsletter button:hover {
+      background: #e6b800;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-icons img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+<header style="background-color:#004c97; color:#fff; position:fixed; top:0; left:0; width:100%; z-index:1000;">
+  <div class="nav-container" style="display:flex; justify-content:space-between; align-items:center; padding:20px; max-width:1200px; margin:auto;">
+
+    <!-- Logo -->
+    <a class="logo" href="../index.html">
+  <img src="../images/Resdential Polytechnic Instiute.png" width="90" alt="Institute Logo">
+</a>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav-links" style="list-style:none; display:flex; margin:0; padding:0;">
+        <li><a href="../index.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Home</a></li>
+        <li><a href="../about/about.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">About Us</a></li>
+        <li><a href="../departments/departments.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Departments</a></li>
+        <li><a href="../facilities/facilities.html" class="active" style="color:#004c97; background:#ffcc00; padding:5px 10px; text-decoration:none; border-radius:4px; font-style:italic; font-weight:bold;">Facilities</a></li>
+        <li><a href="../tution-fee/tution-fee.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Tuition Fee</a></li>
+        <li><a href="../contact/contact.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" style="font-size:28px; cursor:pointer; display:none; color:#fff;">&#9776;</div>
+  </div>
+</header>
+
+<!-- JavaScript for Responsive Menu -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    if(navLinks.style.display === 'flex' && window.innerWidth <= 768){
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '20px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    }
+  });
+
+  function resizeNav() {
+    if(window.innerWidth <= 768){
+      document.querySelector('.menu-toggle').style.display = 'block';
+      navLinks.style.display = 'none';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '20px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    } else {
+      document.querySelector('.menu-toggle').style.display = 'none';
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'row';
+      navLinks.style.position = 'static';
+      navLinks.style.width = 'auto';
+      navLinks.style.backgroundColor = 'transparent';
+      navLinks.style.padding = '0';
+    }
+  }
+
+  window.addEventListener('resize', resizeNav);
+  window.addEventListener('load', resizeNav);
+</script>
+
+
+  <!-- Facilities Section -->
+  <section class="facilities" id="facilities">
+    <h2 style="margin-top: 200px;">সুবিধাসমূহ</h2>
+    <div class="facilities-list">
+      <div class="facility-card">
+        <img src="../images/job-placement.png" alt="Job Placement">
+        <h3>জব প্লেসমেন্ট দ্বারা চাকুরীর সুযোগ</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/short-courses.png" alt="Short Courses">
+        <h3>ছোট কোর্স (৩-৬ মাস)</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/transport.png" alt="Transport">
+        <h3>শর্তসাপেক্ষ পরিবহন সুবিধা</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/freelancing.png" alt="Freelancing">
+        <h3>ফ্রিল্যান্সিং কোর্স এবং নির্দেশনা</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/industry-visit.png" alt="Industry Visit">
+        <h3>ইন্ডাস্ট্রি ভিজিট</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/carrer-guide.png" alt="Career Guidance">
+        <h3>ক্যারিয়ার গাইডলাইন</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/parents-session.png" alt="Parents Session">
+        <h3>মাসিক অভিভাবক সচেতনতামূলক সেশন</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/hostel.png" alt="Hostel">
+        <h3>ছাত্রাবাস সুবিধা</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/sports.png" alt="Sports">
+        <h3>খেলাধুলার সুবিধা</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/debating.png" alt="Debiting">
+        <h3>ডেবিটিং সুবিধা</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/blood-donation.png" alt="Blood Donation">
+        <h3>রক্তদান কার্যক্রম</h3>
+      </div>
+      <div class="facility-card">
+        <img src="../images/scouts.png" alt="Scout">
+        <h3>স্কাউটস কার্যক্রম</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html"><img src="../images/Resdential Polytechnic Instiute.png" alt="Institute Logo" width="80"></a>
+        <h4>Resdential Polytechnic Institute</h4>
+        <p>Empowering students with modern skills, scholarships, and practical learning to succeed in life.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../departments/departments.html">Departments</a></li>
+          <li><a href="../facilities/facilities.html">Facilities</a></li>
+          <li><a href="../index.html#testimonials">Testimonials</a></li>
+          <li><a href="../index.html#why-choose-us">Why Choose Us</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Khadija-Harun Vaban, Baniajuri, Ghior, Manikganj.</p>
+        <p>Email: info@rpi.edu.bd</p>
+        <p>Phone: +880 1708197154, <br>
++880 1686795784</p>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe to receive updates, scholarships, and news.</p>
+        <form action="contact-form.php" method="post">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+     <div class="social-icons">
+  <a href="https://www.facebook.com/profile.php?id=61575094591937" style="display:inline-block; margin-right:10px;">
+    <img src="../images/Icons/facebook.png" alt="Facebook" style="width:28px; height:28px;">
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61575094591937" style="display:inline-block; margin-right:10px;">
+    <img src="../images/Icons/twitter.png" alt="Twitter" style="width:28px; height:28px;">
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61575094591937" style="display:inline-block; margin-right:10px;">
+    <img src="../images/Icons/linkedin.png" alt="LinkedIn" style="width:28px; height:28px;">
+  </a>
+  <a href="https://www.instagram.com/residentialpolytechnic2025/" style="display:inline-block; margin-right:10px;">
+    <img src="../images/Icons/instagram.png" alt="Instagram" style="width:28px; height:28px;">
+  </a>
+</div>

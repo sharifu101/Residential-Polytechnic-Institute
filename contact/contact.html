@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Residential Polytechnic Institute</title>
+  <link rel="icon" type="image/png" href="../images/android-chrome-192x192.png">
+</head>
+<body style="margin:0; font-family:'Poppins', sans-serif; background:#f9f9f9;">
+
+
+
+  <style>
+.active {
+  background-color: #ffcc00; /* Highlight color */
+  
+  border-radius: 4px;
+  font-weight: bold;
+}
+  </style>
+
+
+  <!-- Header -->
+<header style="background-color:#004c97; color:#fff;">
+  <div id="nav-container" style="display:flex; justify-content:space-between; align-items:center; padding:20px 40px; position:relative;">
+    
+    <!-- Logo -->
+    <a class="logo" href="../index.html">
+  <img src="../images/Resdential Polytechnic Instiute.png" width="90" alt="Institute Logo">
+</a>
+    
+    <!-- Navigation -->
+    <nav>
+      <ul id="nav-links" style="list-style:none; display:flex; margin:0; padding:0;">
+        <li style="margin-left:20px;"><a href="../index.html" style="color:#fff; text-decoration:none; padding:5px 10px; font-style:italic;">Home</a></li>
+        <li style="margin-left:20px;"><a href="../about/about.html" style="color:#fff; text-decoration:none; padding:5px 10px; font-style:italic;">About Us</a></li>
+        <li style="margin-left:20px;"><a href="../departments/departments.html" style="color:#fff; text-decoration:none; padding:5px 10px; font-style:italic;">Departments</a></li>
+        <li style="margin-left:20px;"><a href="../facilities/facilities.html" style="color:#fff; text-decoration:none; padding:5px 10px; font-style:italic;">Facilities</a></li>
+        <li style="margin-left:20px;"><a href="../tution-fee/tution-fee.html" style="color:#fff; text-decoration:none; padding:5px 10px; font-style:italic;">Tuition Fee</a></li>
+        <li style="margin-left:20px;"><a href="../contact/contact.html" class="active" style="color:#fff; text-decoration:none; padding:5px 10px; font-style:italic; background:#003366; border-radius:4px;">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Hamburger -->
+    <div id="menu-toggle" style="font-size:28px; cursor:pointer; display:none; color:#fff;">&#9776;</div>
+  </div>
+</header>
+
+<!-- JS for responsive menu -->
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  function resizeNav() {
+    if(window.innerWidth <= 768){
+      toggle.style.display = 'block';
+      navLinks.style.display = 'none';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '40px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    } else {
+      toggle.style.display = 'none';
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'row';
+      navLinks.style.position = 'static';
+      navLinks.style.width = 'auto';
+      navLinks.style.backgroundColor = 'transparent';
+      navLinks.style.padding = '0';
+    }
+  }
+
+  toggle.addEventListener('click', () => {
+    if(navLinks.style.display === 'flex'){
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+    }
+  });
+
+  window.addEventListener('resize', resizeNav);
+  window.addEventListener('load', resizeNav);
+</script>
+
+
+  <!-- Banner -->
+  <section style="background:url(../images/contact-us.png) center/cover no-repeat; padding:100px 20px; color:#fff; text-align:center;">
+    <h1 style="font-size:3rem; font-weight:700; margin:0;">Contact Us</h1>
+    <p style="font-size:1.2rem; margin-top:10px;">We’re here to answer your questions and help you</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section style="padding:60px 20px; max-width:1200px; margin:auto;">
+    <div style="display:flex; flex-wrap:wrap; gap:40px; justify-content:center;">
+
+      <!-- Contact Form -->
+      <div style="flex:1; min-width:320px; max-width:600px; background:#fff; padding:30px; border-radius:10px; box-shadow:0 6px 15px rgba(0,0,0,0.1);">
+        <h2 style="color:#004c97; margin-bottom:20px;">Send Us a Message</h2>
+        <form action="contact-form.php" method="POST">
+          <label style="display:block; margin-bottom:8px; font-weight:600;">Full Name</label>
+          <input type="text" placeholder="Enter your full name" required 
+                 style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px;">
+
+          <label style="display:block; margin-bottom:8px; font-weight:600;">Email Address</label>
+          <input type="email" placeholder="Enter your email" required 
+                 style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px;">
+
+          <label style="display:block; margin-bottom:8px; font-weight:600;">Message</label>
+          <textarea rows="6" placeholder="Type your message" required 
+                    style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px;"></textarea>
+
+          <button type="submit" 
+                  style="background:#004c97; color:#fff; padding:12px 25px; border:none; border-radius:6px; font-weight:bold; cursor:pointer;">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Details -->
+      <div style="flex:1; min-width:280px; max-width:500px; padding:30px;">
+        <h2 style="color:#004c97; margin-bottom:20px;">Get in Touch</h2>
+        <p style="margin-bottom:15px;"><strong>📍 Address:</strong> Khadija-Harun Vaban, Baniajuri, Ghior, Manikganj.</p>
+        <p style="margin-bottom:15px;"><strong>📧 Email:</strong> info@rpi.edu.bd</p>
+        <p style="margin-bottom:15px;"><strong>📞 Phone:</strong> +880 1234 567890</p>
+        <p style="margin-bottom:15px;"><strong>🕘 Office Hours:</strong> Sun - Thu: 9:00 AM - 5:00 PM</p>
+
+        <p style="margin-bottom:10px; font-weight:600; color:#004c97;">Follow Us:</p>
+        <div style="display:flex; gap:15px; margin-top:10px;">
+          <a href="#"><img src="../images/Icons/facebook.png" width="28" alt="Facebook"></a>
+          <a href="#"><img src="../images/Icons/twitter.png" width="28" alt="Twitter"></a>
+          <a href="#"><img src="../images/Icons/linkedin.png" width="28" alt="LinkedIn"></a>
+          <a href="#"><img src="../images/Icons/instagram.png" width="28" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section style="margin:40px 0;">
+    <h2 style="text-align:center; color:#004c97; margin-bottom:20px;">Find Us on Map</h2>
+    <div style="max-width:1200px; margin:auto;">
+      <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29153.673397695817!2d89.87528165132582!3d23.849905620000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe1f3a3f42e88b%3A0x5ed06c46cb50c8b8!2sResidential%20Polytechnic%20Institute%2C%20Baniajuri%2C%20Ghior%2C%20Manikganj!5e0!3m2!1sen!2sbd!4v1694509999999" 
+  width="100%" 
+  height="400" 
+  style="border:0; border-radius:10px;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+
+    </div>
+  </section>
+
+  <!-- Footer (Same as your provided code) -->
+  <footer class="site-footer" style="background:#004c97; color:#fff; padding:60px 20px 20px; font-family:'Poppins', sans-serif;">
+    <div class="container footer-top" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:40px; margin-bottom:40px;">
+      
+      <!-- Logo & Description -->
+      <div class="footer-brand">
+        <a href="../index.html" class="image-button">
+          <img src="../images/Resdential Polytechnic Instiute.png" alt="Institute Logo" width="80" style="border-radius:8px;">
+        </a>
+        <h2 style="text-align:left; font-size:20px;">Resdential Polytechnic Institute</h2>
+        <p>Empowering students with modern skills, scholarships, and practical learning to succeed in life.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h3 style="color:#ffcc00;">Quick Links</h3>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="#departments" style="color:#fff; text-decoration:none;">Departments</a></li>
+          <li><a href="#facilities" style="color:#fff; text-decoration:none;">Facilities</a></li>
+          <li><a href="#testimonials" style="color:#fff; text-decoration:none;">Testimonials</a></li>
+          <li><a href="#why-choose-us" style="color:#fff; text-decoration:none;">Why Choose Us</a></li>
+          <li><a href="#contact" style="color:#fff; text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h3 style="color:#ffcc00;">Contact Us</h3>
+        <p>123 Street Name, City, Country</p>
+        <p>Email: info@institute.com</p>
+        <p>Phone: +880 1234 567890</p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h3 style="color:#ffcc00;">Newsletter</h3>
+        <p>Subscribe to receive updates, scholarships, and news.</p>
+        <form action="contact-form.php" method="post" style="display:flex; margin-bottom:15px;">
+          <input type="email" placeholder="Your email address" required 
+                 style="flex:1; padding:10px 15px; border:none; border-radius:6px 0 0 6px; outline:none;">
+          <button type="submit" 
+                  style="padding:10px 20px; border:none; background:#ffcc00; color:#004c97; font-weight:bold; cursor:pointer; border-radius:0 6px 6px 0;">
+            Subscribe
+          </button>
+        </form>
+        <div class="social-icons" style="margin-top:10px;">
+          <a href="https://www.facebook.com/profile.php?id=61575094591937"><img src="../images/Icons/facebook.png" alt="Facebook" width="28"></a>
+          <a href="#"><img src="../images/Icons/twitter.png" alt="Twitter" width="28"></a>
+          <a href="#"><img src="../images/Icons/linkedin.png" alt="LinkedIn" width="28"></a>
+          <a href="https://www.instagram.com/residentialpolytechnic2025/"><img src="../images/Icons/instagram.png" alt="Instagram" width="28"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom" style="text-align:center; padding:20px 0; border-top:1px solid rgba(255,255,255,0.2); font-size:0.9rem;">
+      <p>&copy; 2025 Institute Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

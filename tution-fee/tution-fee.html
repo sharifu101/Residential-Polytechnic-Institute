@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuition Fee - Residential Polytechnic Institute</title>
+  <link rel="icon" type="image/png" href="../images/android-chrome-192x192.png">
+  <style>
+    /* Navigation */
+    header {
+      background-color: #004c97;
+      color: #fff;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .logo img {
+      display: block;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      font-style: italic; /* italic style */
+    }
+
+    .nav-links a:hover {
+      background-color: #003366;
+      border-radius: 4px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+
+    .nav-links a.active {
+  background-color: #ffcc00; /* Highlight color */
+  color: #004c97; /* Text color */
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+
+    /* Tuition Fee Section */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+
+    h2 {
+      text-align: center;
+      color: #004c97;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #004c97;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background: #004c97;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+
+    tr:hover {
+      background: #e6f0ff;
+    }
+
+    .discount-box {
+      background: #fff8e1;
+      border-left: 6px solid #ff9800;
+      padding: 20px;
+      border-radius: 8px;
+      line-height: 1.8;
+    }
+
+    .discount-box h3 {
+      color: #d17c00;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #004c97;
+      color: #fff;
+      padding: 60px 20px 20px;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .site-footer a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .site-footer a:hover {
+      color: #ffcc00;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-links h3,
+    .footer-contact h3,
+    .footer-newsletter h3 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #ffcc00;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-contact p {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .footer-newsletter p {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .footer-newsletter form {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    .footer-newsletter input[type="email"] {
+      flex: 1;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px 0 0 6px;
+      outline: none;
+    }
+
+    .footer-newsletter button {
+      padding: 10px 20px;
+      border: none;
+      background: #ffcc00;
+      color: #004c97;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 0 6px 6px 0;
+      transition: background 0.3s;
+    }
+
+    .footer-newsletter button:hover {
+      background: #e6b800;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-icons img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .image-button img {
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .image-button img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+
+
+  
+  </style>
+</head>
+<body>
+
+ <!-- Navigation Bar -->
+<header style="background-color:#004c97; color:#fff; position:fixed; top:0; left:0; width:100%; z-index:1000;">
+  <div class="nav-container" style="display:flex; justify-content:space-between; align-items:center; padding:20px; max-width:1200px; margin:auto;">
+
+    <!-- Logo -->
+    <a class="logo" href="../index.html">
+  <img src="../images/Resdential Polytechnic Instiute.png" width="90" alt="Institute Logo">
+</a>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav-links" style="list-style:none; display:flex; margin:0; padding:0;">
+        <li><a href="../index.html#home" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Home</a></li>
+        <li><a href="../index.html#about" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">About Us</a></li>
+        <li><a href="../index.html#departments" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Departments</a></li>
+        <li><a href="../index.html#facilities" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Facilities</a></li>
+        <li><a href="../tution-fee/tution-fee.html" class="active" style="color:#004c97; background:#ffcc00; padding:5px 10px; text-decoration:none; border-radius:4px; font-style:italic; font-weight:bold;">Tuition Fee</a></li>
+        <li><a href="../contact/contact.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" style="font-size:28px; cursor:pointer; display:none; color:#fff;">&#9776;</div>
+  </div>
+</header>
+
+<!-- JavaScript for Responsive Menu -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    if(navLinks.style.display === 'flex' && window.innerWidth <= 768){
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '20px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    }
+  });
+
+  function resizeNav() {
+    if(window.innerWidth <= 768){
+      document.querySelector('.menu-toggle').style.display = 'block';
+      navLinks.style.display = 'none';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '20px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    } else {
+      document.querySelector('.menu-toggle').style.display = 'none';
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'row';
+      navLinks.style.position = 'static';
+      navLinks.style.width = 'auto';
+      navLinks.style.backgroundColor = 'transparent';
+      navLinks.style.padding = '0';
+    }
+  }
+
+  window.addEventListener('resize', resizeNav);
+  window.addEventListener('load', resizeNav);
+});
+
+</script>
+
+
+
+
+
+  <!-- Tuition Fee Section -->
+  <div style="margin-top: 200px;" class="container">
+    <h2 style="text-align:center; color:#004c97; margin-bottom:20px; border-bottom:3px solid #004c97; display:inline-block; padding-bottom:5px; width:100%; text-align:center;">
+  Tuition Fees for Diploma and Short Courses
+</h2>
+
+
+   <div style="max-width:1000px; margin:40px auto; padding:30px; border-radius:10px; background:#fff; box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+
+  <!-- Diploma Engineering Table -->
+  <h2 style="text-align:center; color:#004c97; margin-bottom:20px; border-bottom:3px solid #004c97; display:inline-block; padding-bottom:5px;">Diploma in Engineering</h2>
+
+  <div style="overflow-x:auto;">
+  <table style="width:100%; border-collapse:collapse; text-align:center; font-family:Arial, sans-serif; min-width:600px;">
+    <thead style="background-color:#004c97; color:#fff;">
+      <tr>
+        <th style="padding:12px; border:1px solid #004c97;">টেকনোলজি</th>
+        <th style="padding:12px; border:1px solid #004c97;">ভর্তি ফি</th>
+        <th style="padding:12px; border:1px solid #004c97;">সেমিষ্টার ফি</th>
+        <th style="padding:12px; border:1px solid #004c97;">পরীক্ষার ফি</th>
+        <th style="padding:12px; border:1px solid #004c97;">টিউশন ফি</th>
+        <th style="padding:12px; border:1px solid #004c97;">মোট সেমিষ্টার ফি</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color:#f2f2f2;">
+        <td style="padding:12px; border:1px solid #004c97;">Computer Technology</td>
+        <td style="padding:12px; border:1px solid #004c97;">৫,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">৭,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">প্রযোজ্য অনুযায়ী</td>
+        <td style="padding:12px; border:1px solid #004c97;">৫০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">১২,০০০ টাকা</td>
+      </tr>
+      <tr>
+        <td style="padding:12px; border:1px solid #004c97;">Electrical Technology</td>
+        <td style="padding:12px; border:1px solid #004c97;">৫,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">৭,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">প্রযোজ্য অনুযায়ী</td>
+        <td style="padding:12px; border:1px solid #004c97;">৫০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">১২,০০০ টাকা</td>
+      </tr>
+      <tr style="background-color:#f2f2f2;">
+        <td style="padding:12px; border:1px solid #004c97;">Civil Technology</td>
+        <td style="padding:12px; border:1px solid #004c97;">৫,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">৭,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">প্রযোজ্য অনুযায়ী</td>
+        <td style="padding:12px; border:1px solid #004c97;">৫০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">১২,০০০ টাকা</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+  <!-- Highlight Note -->
+  <p style="text-align:center; background-color:#ffeb3b; color:#004c97; padding:15px; font-weight:bold; border-radius:8px; margin-bottom:40px;">
+    আলোচনা সাপেক্ষে টিউশন ফি নির্ধারণ করা যাবে।
+  </p>
+
+
+
+
+
+  <!-- Special Discount Rules -->
+    <div class="discount-box">
+      <h3>📌শুধু মাত্র টিউশন ফি-এর উপর বিশেষ ছাড়!</h3>
+      <ul>
+        <li>Golden GPA: <strong>১০০% ফ্রি!</strong></li>
+        <li>GPA 5.00: <strong>৭৫% ছাড়!</strong></li>
+        <li>GPA 4.75 – 4.99: <strong>৫০% ছাড়!</strong></li>
+        <li>GPA 4.50 – 4.74: <strong>৩০% ছাড়!</strong></li>
+        <li>প্রতিবন্ধী শিক্ষার্থীদের জন্য: <strong>৫০% ছাড়!</strong></li>
+        <li>শিক্ষক/শিক্ষিকার সন্তানদের জন্য: <strong>২৫% ছাড়!</strong></li>
+        <li>গরীব ও মাদ্রাসা শিক্ষার্থীদের জন্য: <strong>বিশেষ ছাড়ের ব্যবস্থা!</strong></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Short Courses Table -->
+  <h2 style="text-align:center; color:#004c97; margin-bottom:20px; border-bottom:3px solid #004c97; display:inline-block; padding-bottom:5px;">শর্ট কোর্স</h2>
+
+  <table style="width:100%; border-collapse:collapse; margin-bottom:20px; text-align:center;">
+    <thead>
+      <tr style="background-color:#004c97; color:#fff;">
+        <th style="padding:12px; border:1px solid #004c97;">কোর্স নাম</th>
+        <th style="padding:12px; border:1px solid #004c97;">ভর্তি ফি</th>
+        <th style="padding:12px; border:1px solid #004c97;">সময়কাল</th>
+        <!-- <th style="padding:12px; border:1px solid #004c97;">মোট সেমিষ্টার ফি</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color:#f2f2f2;">
+        <td style="padding:12px; border:1px solid #004c97;">Computer Application</td>
+        <td style="padding:12px; border:1px solid #004c97;">৩,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">৩ মাস – ১ বছর</td>
+        <!-- <td style="padding:12px; border:1px solid #004c97;">১২,০০০ টাকা</td> -->
+      </tr>
+      <tr>
+        <td style="padding:12px; border:1px solid #004c97;">House Waring</td>
+        <td style="padding:12px; border:1px solid #004c97;">৩,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">৩ মাস – ১ বছর</td>
+        <!-- <td style="padding:12px; border:1px solid #004c97;">১২,০০০ টাকা</td> -->
+      </tr>
+      <tr style="background-color:#f2f2f2;">
+        <td style="padding:12px; border:1px solid #004c97;">Amin Ship</td>
+        <td style="padding:12px; border:1px solid #004c97;">৫,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">৩ মাস – ১ বছর</td>
+        <!-- <td style="padding:12px; border:1px solid #004c97;">১২,০০০ টাকা</td> -->
+      </tr>
+      <tr>
+        <td style="padding:12px; border:1px solid #004c97;">Driving</td>
+        <td style="padding:12px; border:1px solid #004c97;">৫,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">৩ মাস – ১ বছর</td>
+        <!-- <td style="padding:12px; border:1px solid #004c97;">১২,০০০ টাকা</td> -->
+      </tr>
+      <tr style="background-color:#f2f2f2;">
+        <td style="padding:12px; border:1px solid #004c97;">Freelancing</td>
+        <td style="padding:12px; border:1px solid #004c97;">৫,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">৩ মাস – ১ বছর</td>
+        <!-- <td style="padding:12px; border:1px solid #004c97;">১২,০০০ টাকা</td> -->
+      </tr>
+      <tr>
+        <td style="padding:12px; border:1px solid #004c97;">Fine Arts</td>
+        <td style="padding:12px; border:1px solid #004c97;">৩৫,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">১ বছর</td>
+        <!-- <td style="padding:12px; border:1px solid #004c97;">১২,০০০ টাকা</td> -->
+      </tr>
+      <tr style="background-color:#f2f2f2;">
+        <td style="padding:12px; border:1px solid #004c97;">Physical Education</td>
+        <td style="padding:12px; border:1px solid #004c97;">৩৫,০০০ টাকা</td>
+        <td style="padding:12px; border:1px solid #004c97;">১ বছর</td>
+        <!-- <td style="padding:12px; border:1px solid #004c97;">১২,০০০ টাকা</td> -->
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+
+
+  
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container- footer-top">
+      
+      <!-- Logo & Description -->
+      <div class="footer-brand">
+        <a href="../index.html" class="image-button">
+          <img src="../images/Resdential Polytechnic Instiute.png" alt="Institute Logo" width="80">
+        </a>
+        <h2 style="color: white; font-style: italic; text-align: left;">Residential Polytechnic Institute</h2>
+        <p>Empowering students with modern skills, scholarships, and practical learning to succeed in life.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html#departments">Departments</a></li>
+          <li><a href="../index.html#facilities">Facilities</a></li>
+          <li><a href="../index.html#testimonials">Testimonials</a></li>
+          <li><a href="../index.html#why-choose-us">Why Choose Us</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Khadija-Harun Vaban, Baniajuri, Ghior, Manikganj.</p>
+        <p>Email: info@institute.com</p>
+        <p>Phone: +880 1234 567890</p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe to receive updates, scholarships, and news.</p>
+        <form action="contact-form.php" method="post">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-icons">
+          <a href="#"><img src="../images/Icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="../images/Icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="../images/Icons/linkedin.png" alt="LinkedIn"></a>
+          <a href="#"><img src="../images/Icons/instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Residential Polytechnic Institute. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+
+
+  
+<script>
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const currentPage = window.location.pathname.split("/").pop();
+
+  navLinks.forEach(link => {
+    if(link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+</script>
+
+</body>
+</html>

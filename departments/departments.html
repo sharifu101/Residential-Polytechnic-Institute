@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Departments - Residential Polytechnic Institute</title>
+  <link rel="icon" type="image/png" href="../images/android-chrome-192x192.png">
+  <style>
+    /* ===== Reset some default styles ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== Header ===== */
+    .main-header {
+      width: 100%;
+      background-color: #004c97;
+      color: #fff;
+    }
+
+    .main-nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      padding: 5px 10px;
+      font-style: italic;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #003366;
+      border-radius: 4px;
+    }
+
+.nav-links a.active {
+  background-color: #ffcc00; /* Highlight color */
+  color: #004c97; /* Text color */
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* ===== Departments Section ===== */
+    .departments {
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+
+    .departments h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: #004c97;
+      position: relative;
+    }
+
+    .departments h2::after {
+      content: "";
+      display: block;
+      width: 30%;
+      height: 4px;
+      background: linear-gradient(90deg, #004c97, #1e90ff);
+      margin: 10px auto 0;
+      border-radius: 4px;
+    }
+
+    .dept-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dept-card {
+      background-color: #eeecec;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .dept-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .dept-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .dept-card h3 {
+      margin-bottom: 15px;
+      color: #004c97;
+    }
+
+    .dept-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .dept-card a {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 18px;
+      background: #ffcc00;
+      color: #004c97;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .dept-card a:hover {
+      background: #e6b800;
+    }
+
+    @media (max-width: 992px) {
+      .dept-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .dept-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== Footer ===== */
+    .main-footer {
+      width: 100%;
+      background: #004c97;
+      color: #fff;
+      padding-top: 60px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .footer-brand h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-links h3,
+    .footer-contact h3,
+    .footer-newsletter h3 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #ffcc00;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-contact p {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .footer-newsletter p {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .footer-newsletter form {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    .footer-newsletter input[type="email"] {
+      flex: 1;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px 0 0 6px;
+      outline: none;
+    }
+
+    .footer-newsletter button {
+      padding: 10px 20px;
+      border: none;
+      background: #ffcc00;
+      color: #004c97;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 0 6px 6px 0;
+      transition: background 0.3s;
+    }
+
+    .footer-newsletter button:hover {
+      background: #e6b800;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .social-icons img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.9rem;
+    }
+
+    .image-button img {
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .image-button img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+<header style="background-color:#004c97; color:#fff; position:fixed; top:0; left:0; width:100%; z-index:1000;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding:20px; max-width:1200px; margin:auto;">
+
+    <!-- Logo -->
+<a class="logo" href="../index.html">
+  <img src="../images/Resdential Polytechnic Instiute.png" width="90" alt="Institute Logo">
+</a>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav-links" style="list-style:none; display:flex; margin:0; padding:0;">
+        <li><a href="../index.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Home</a></li>
+        <li><a href="../about/about.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">About Us</a></li>
+        <li><a href="../departments/departments.html" class="active" style="color:#004c97; background:#ffcc00; padding:5px 10px; text-decoration:none; border-radius:4px; font-style:italic; font-weight:bold;">Departments</a></li>
+        <li><a href="../facilities/facilities.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Facilities</a></li>
+        <li><a href="../tution-fee/tution-fee.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Tuition Fee</a></li>
+        <li><a href="../contact/contact.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" style="font-size:28px; cursor:pointer; display:none; color:#fff;">&#9776;</div>
+  </div>
+</header>
+
+<!-- JavaScript for Responsive Menu -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    if(navLinks.style.display === 'flex' && window.innerWidth <= 768){
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '20px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    }
+  });
+
+  function resizeNav() {
+    if(window.innerWidth <= 768){
+      document.querySelector('.menu-toggle').style.display = 'block';
+      navLinks.style.display = 'none';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '20px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    } else {
+      document.querySelector('.menu-toggle').style.display = 'none';
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'row';
+      navLinks.style.position = 'static';
+      navLinks.style.width = 'auto';
+      navLinks.style.backgroundColor = 'transparent';
+      navLinks.style.padding = '0';
+    }
+  }
+
+  window.addEventListener('resize', resizeNav);
+  window.addEventListener('load', resizeNav);
+</script>
+
+
+
+<!-- ===== Departments Banner ===== -->
+<section style="width:100%; background:#99a5eb; padding:100px 20px; text-align:center; color:#fff; margin-top: 100px;">
+  <h1 style="font-size:3rem; font-weight:700; margin:0;">Departments</h1>
+  <p style="font-size:1.2rem; margin-top:10px;">Explore our diverse range of academic departments</p>
+</section>
+
+
+
+
+  <!-- ===== Departments Section ===== -->
+<section class="departments">
+  
+  <!-- <h2>Our Departments</h2> -->
+  <div class="dept-grid">
+    <!-- Department Cards -->
+    <div class="dept-card">
+      <img src="../images/CST.png" alt="Computer Science & Technology">
+      <h3>Computer Science & Technology</h3>
+      <p>আমরা শিক্ষার্থীদের প্রোগ্রামিং, ওয়েব ডেভেলপমেন্ট, গ্রাফিক্স ডিজাইন, নেটওয়ার্কিং এবং আধুনিক কম্পিউটিং দক্ষতা অর্জনের সুযোগ প্রদান করে, যাতে তারা ডিজিটাল যুগে সাফল্যের শিখরে পৌঁছাতে পারে।</p>
+      <a  href="../index.html">Admission Now</a>
+    </div>
+
+    <div class="dept-card">
+      <img src="../images/ET.png" alt="Electrical Technology">
+      <h3>Electrical Technology</h3>
+      <p>আমাদের ইলেকট্রিক্যাল বিভাগে শিক্ষার্থীরা বিদ্যুৎ প্রযুক্তি, ইলেকট্রনিক্স, পাওয়ার সিস্টেম এবং ব্যবহারিক প্রশিক্ষণের মাধ্যমে আধুনিক জ্ঞান অর্জন করে। অভিজ্ঞ শিক্ষক ও সুসজ্জিত ল্যাবরেটরির সহায়তায় তারা দক্ষ টেকনিশিয়ান ও প্রকৌশলী হিসেবে গড়ে ওঠে।</p>
+      <a href="../index.html#home">Admission Now</a>
+    </div>
+
+    <div class="dept-card">
+      <img src="../images/CT.png" alt="Civil Technology">
+      <h3>Civil Technology</h3>
+      <p>আধুনিক অবকাঠামো নকশা, নির্মাণ ও ব্যবস্থাপনায় দক্ষতা অর্জন করুন। কনস্ট্রাকশন, সার্ভেয়িং এবং স্ট্রাকচারাল ইঞ্জিনিয়ারিং-এ ব্যবহারিক জ্ঞানের মাধ্যমে নিজেকে গড়ে তুলুন একজন যোগ্য সিভিল প্রযুক্তিবিদ হিসেবে।</p>
+      <a href="../index.html#home">Admission Now</a>
+    </div>
+
+    <div class="dept-card">
+      <img src="../images/Surveying.png" alt="Surveying Technology">
+      <h3>Surveying Technology (Coming Soon...)</h3>
+      <p>ভূমি সমীক্ষা, মানচিত্রায়ন এবং উন্নত জ্যোস্প্যাটিয়াল প্রযুক্তিতে দক্ষতা অর্জন করুন, যা আগামীকালের অবকাঠামো গঠনে সহায়ক হবে।</p>
+      <a href="../index.html#home">Admission Now</a>
+    </div>
+
+    <div class="dept-card">
+      <img src="../images/E_T.png" alt="Environmental Science">
+      <h3>Environmental Technology (Coming Soon...)</h3>
+      <p>পরিবেশ সংরক্ষণ, স্থায়িত্ব এবং উদ্ভাবনী ইকোলজিক্যাল প্রয়োগগুলি অন্বেষণ করুন, একটি সবুজ ও টেকসই ভবিষ্যৎ নির্মাণের জন্য।</p>
+      <a href="../index.html#home">Admission Now</a>
+    </div>
+
+    <div class="dept-card">
+      <img src="../images/RAC.png" alt="Refrigeration & Air Conditioning">
+      <h3>Refrigeration & Air Conditioning Technology (Coming Soon...)</h3>
+      <p>শিল্প ও ঘরোয়া প্রয়োজনের জন্য এইচভিএসি সিস্টেম, রেফ্রিজারেশন প্রযুক্তি এবং আধুনিক জলবায়ু নিয়ন্ত্রণ সমাধানে দক্ষতা অর্জন করুন।</p>
+      <a href="../index.html#home">Admission Now</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===== Footer ===== -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="../index.html" class="image-button">
+          <img src="../images/Resdential Polytechnic Instiute.png" width="80" alt="Institute Logo">
+        </a>
+        <h3>Resdential Polytechnic Institute</h3>
+        <p>Empowering students with modern skills, scholarships, and practical learning to succeed in life.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="departments.html">Departments</a></li>
+          <li><a href="../facilities/facilities.html">Facilities</a></li>
+          <li><a href="../index.html#testimonials">Testimonials</a></li>
+          <li><a href="../index.html#why-choose-us">Why Choose Us</a></li>
+          <li><a href="../contact/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Khadija-Harun Vaban, Baniajuri, Ghior, Manikganj.</p>
+        <p>Email: info@rpi.edu.bd</p>
+        <p>Phone: +880 1708197154, +880 1686795784</p>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe to receive updates, scholarships, and news.</p>
+        <form action="contact-form.php" method="post">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61575094591937"><img src="../images/Icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="../images/Icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="../images/Icons/linkedin.png" alt="LinkedIn"></a>
+          <a href="https://www.instagram.com/residentialpolytechnic2025/"><img src="../images/Icons/instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Resdential Polytechnic Institute. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

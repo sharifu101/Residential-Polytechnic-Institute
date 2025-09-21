@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Residential Polytechnic Institute</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/android-chrome-192x192.png">
+</head>
+<body>
+
+ <!-- Navigation Bar -->
+<header style="background-color:#004c97; color:#fff; position:fixed; top:0; left:0; width:100%; z-index:1000;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding:20px; max-width:1200px; margin:auto;">
+    
+    <!-- Logo -->
+<a class="logo" href="index.html">
+  <img src="images/Resdential Polytechnic Instiute.png" width="90" alt="Institute Logo">
+</a>
+
+    
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav-links" style="list-style:none; display:flex; margin:0; padding:0;">
+        <li><a href="./index.html" class="active" style="color:#004c97; background:#ffcc00; padding:5px 10px; text-decoration:none; border-radius:4px; font-style:italic; font-weight:bold;">Home</a></li>
+        <li><a href="./about/about.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">About Us</a></li>
+        <li><a href="./departments/departments.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Departments</a></li>
+        <li><a href="./facilities/facilities.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Facilities</a></li>
+        <li><a href="./tution-fee/tution-fee.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Tuition Fee</a></li>
+        <li><a href="./contact/contact.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" style="font-size:28px; cursor:pointer; display:none; color:#fff;">&#9776;</div>
+  </div>
+</header>
+
+<!-- JavaScript for Responsive Menu -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    if(navLinks.style.display === 'flex' && window.innerWidth <= 768) {
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '20px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    }
+  });
+
+  function resizeNav() {
+    if(window.innerWidth <= 768) {
+      toggle.style.display = 'block';
+      navLinks.style.display = 'none';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '20px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    } else {
+      toggle.style.display = 'none';
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'row';
+      navLinks.style.position = 'static';
+      navLinks.style.width = 'auto';
+      navLinks.style.backgroundColor = 'transparent';
+      navLinks.style.padding = '0';
+    }
+  }
+
+  window.addEventListener('resize', resizeNav);
+  window.addEventListener('load', resizeNav);
+</script>
+
+
+
+
+
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content container">
+      <h2 style="margin-top:200px">Residential Polytechnic Institute – Building Skilled Engineers for the Future!</h2>
+      <p>তৈরি করবো প্রকৌশলী দক্ষ, মান সম্মত কর্মসংস্থান আমাদের লক্ষ্য।
+</p>
+      <a href="admission.php" class="btn-primary">Admissions Open</a>
+    </div>
+  </section>
+
+
+
+ <!-- About Section -->
+<section id="about" class="about">
+  <div class="about-container container">
+    <div class="about-image">
+      <img src="images/RPI Banner.png" alt="About Residential Polytechnic Institute">
+    </div>
+    <div class="about-text">
+      <h2 style="text-align: left;">Residential Polytechnic Institute</h2>
+      <p style="font-style: italic;">
+       <strong style="color: #facc15; font-size: 18px;">Residential Polytechnic Institute</strong> কেবল একটি শিক্ষা প্রতিষ্ঠান নয়, বরং আমাদের শিক্ষার্থীদের স্বপ্ন পূরণের একটি শক্তিশালী ভিত্তি। আমরা প্রতিজ্ঞাবদ্ধ আধুনিক কারিগরি শিক্ষা, দক্ষতা উন্নয়ন এবং বাস্তবমুখী অভিজ্ঞতার মাধ্যমে প্রতিটি শিক্ষার্থীকে আত্মনির্ভরশীল ও যোগ্য পেশাজীবী হিসেবে গড়ে তুলতে। <br><br>
+
+আমাদের রয়েছে অভিজ্ঞ শিক্ষকবৃন্দ, আধুনিক ল্যাবরেটরি, এবং প্রাণবন্ত শিক্ষার পরিবেশ। এখান থেকে শিক্ষার্থীরা কেবল পাঠ্যবইয়ের জ্ঞানই নয়, বরং শিল্পক্ষেত্রের সঙ্গে ঘনিষ্ঠ সম্পর্কের মাধ্যমে বাস্তব জগতের অভিজ্ঞতা অর্জন করে। আমরা বিশ্বাস করি, শিক্ষা তখনই সফল হয় যখন তা শিক্ষার্থীর আত্মবিশ্বাস, নৈতিকতা এবং নেতৃত্বের গুণাবলিকে বিকশিত করতে পারে। 
+<br><br>
+
+আমাদের লক্ষ্য হলো এমন প্রজন্ম তৈরি করা যারা শুধু কর্মক্ষেত্রে নয়, সমাজ ও দেশের উন্নয়নেও গুরুত্বপূর্ণ ভূমিকা রাখবে। আমরা প্রতিটি শিক্ষার্থীকে প্রস্তুত করি আধুনিক বিশ্বের চ্যালেঞ্জ মোকাবিলা করতে এবং বিশ্ব নাগরিক হিসেবে নিজেদের প্রমাণ করতে।
+      </p>
+      <a href="about/about.html" class="btn-primary">Learn More</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Departments Section -->
+<section id="departments" class="departments">
+  <div class="container">
+    <h2>Academic Departments</h2>
+    <div class="dept-grid">
+
+      <div class="dept-card">
+        <img src="images/CST.png" alt="Computer Science & Technology">
+        <h3 >Computer Science & Technology</h3>
+        <p>আমরা শিক্ষার্থীদের প্রোগ্রামিং, ওয়েব ডেভেলপমেন্ট, গ্রাফিক্স ডিজাইন, নেটওয়ার্কিং এবং আধুনিক কম্পিউটিং দক্ষতা অর্জনের সুযোগ প্রদান করে, যাতে তারা ডিজিটাল যুগে সাফল্যের শিখরে পৌঁছাতে পারে।</p>
+      </div>
+
+      <div class="dept-card">
+        <img src="images/ET.png" alt="Electrical Technology">
+        <h3>Electrical Technology</h3>
+        <p>আমাদের ইলেকট্রিক্যাল বিভাগে শিক্ষার্থীরা বিদ্যুৎ প্রযুক্তি, ইলেকট্রনিক্স, পাওয়ার সিস্টেম এবং ব্যবহারিক প্রশিক্ষণের মাধ্যমে আধুনিক জ্ঞান অর্জন করে। অভিজ্ঞ শিক্ষক ও সুসজ্জিত ল্যাবরেটরির সহায়তায় তারা দক্ষ টেকনিশিয়ান ও প্রকৌশলী হিসেবে গড়ে ওঠে।</p>
+      </div>
+
+      <div class="dept-card">
+        <img src="images/CT.png" alt="Civil Technology">
+        <h3>Civil Technology</h3>
+        <p>আধুনিক অবকাঠামো নকশা, নির্মাণ ও ব্যবস্থাপনায় দক্ষতা অর্জন করুন। কনস্ট্রাকশন, সার্ভেয়িং এবং স্ট্রাকচারাল ইঞ্জিনিয়ারিং-এ ব্যবহারিক জ্ঞানের মাধ্যমে নিজেকে গড়ে তুলুন একজন যোগ্য সিভিল প্রযুক্তিবিদ হিসেবে।</p>
+      </div>
+
+      <!-- <div class="dept-card">
+        <img src="images/Surveying.png" alt="Surveying Technology">
+        <h3>Surveying Technology (Coming Soon...)</h3>
+        <p>Master land surveying, mapping, and advanced geospatial technologies to shape tomorrow’s infrastructure.</p>
+      </div>
+
+      <div class="dept-card">
+        <img src="images/E_T.png" alt="Environmental Science">
+        <h3>Environmental Technology (Coming Soon...)</h3>
+        <p>Explore environmental protection, sustainability, and innovative ecological practices to build a greener future.</p>
+      </div>
+
+      <div class="dept-card">
+        <img src="images/RAC.png" alt="Refrigeration & Air Conditioning">
+        <h3>Refrigeration & Air Conditioning Technology (Coming Soon...)</h3>
+        <p>Gain expertise in HVAC systems, refrigeration technology, and modern climate control solutions for industrial and domestic needs.</p>
+      </div>
+    </div>
+  -->
+    
+  </div>
+
+
+<div style="width:100%; text-align:center; margin:30px 0;">
+  <a href="departments/departments.html" 
+     style="display:inline-block; padding:10px 32px; background:#facc15; color:#004c97; font-size:18px; font-weight:600; text-decoration:none; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:all 0.3s ease;"
+     onmouseover="this.style.background='#eab308'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.2)'; this.style.transform='scale(1.08)'"
+     onmouseout="this.style.background='#facc15'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'; this.style.transform='scale(1)'">
+     Explore More
+  </a>
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- Facilities Section -->
+<section class="facilities">
+  <div class="container">
+    <h2>Our Facilities</h2>
+    <div class="facilities-grid">
+
+      <div class="facility">
+        <img src="images/F-1.png" alt="Free Books">
+        <h3>Free Books Access</h3>
+        <p>→ লাইব্রেরি কার্ডের মাধ্যমে রিটার্ন নীতি অনুযায়ী সকল বই সম্পূর্ণ বিনামূল্যে পাওয়ার সুবিধা!</p>
+      </div>
+
+      <div class="facility">
+        <img src="images/female-tution.png" alt="Tuition Free for Female">
+        <h3>100% Tuition Free for Females</h3>
+        <p>→ সকল মেয়ে শিক্ষার্থীদের জন্য ১০০% টিউশন ফ্রি মওকুফ!</p>
+      </div>
+
+      <div class="facility">
+        <img src="images/Schoolership.png" alt="Scholarship">
+        <h3>Scholarship Program</h3>
+        <p>→ সরকারি নীতিমালা অনুযায়ী ছাত্র-ছাত্রীদের জন্য ৪ বছরের ৪০,০০০ টাকা বৃত্তি সুবিধা!</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="why-choose-us">
+  <div class="container">
+    <div class="why-content">
+
+     
+
+      <!-- Right Text -->
+      <div class="why-text">
+        <h2>Why Choose Residential Polytechnic Institute?</h2>
+        <p>আমরা তৈরি করছি একটি বিশ্বমানের শিক্ষার পরিবেশ, যেখানে শিক্ষার্থীরা তাদের সর্বোচ্চ সম্ভাবনা অর্জনে সক্ষম হয়। আধুনিক সুযোগ-সুবিধা, অভিজ্ঞ শিক্ষক এবং নিবেদিত ক্যারিয়ার সহায়তার মাধ্যমে প্রতিটি শিক্ষার্থীকে সফল ভবিষ্যতের জন্য প্রস্তুত করা হয়।</p>
+
+        <div class="why-points">
+          <div style="margin: 20px;" class="point">
+            <div style="margin-top: -10px;" class="icon"><img src="images/mordern facilites.png" alt="Facilities"></div>
+            <div class="text"><strong>আধুনিক সুযোগ-সুবিধা: </strong>অত্যাধুনিক ল্যাব, শ্রেণিকক্ষ ও পর্যাপ্ত রিসোর্স যা ব্যবহারিক শিক্ষায় সহায়ক।</div>
+          </div>
+          <div style="margin: 20px;" class="point">
+            <div style="margin-top: -10px;" class="icon"><img src="images/Tution-facilites.png" alt="Scholarship"></div>
+            <div class="text"><strong>বৃত্তি ও ফ্রি টিউশন:</strong> মেয়েদের জন্য সম্পূর্ণ ফ্রি টিউশন এবং সবার জন্য আকর্ষণীয় বৃত্তির ব্যবস্থা।</div>
+          </div>
+          <div style="margin: 20px;" class="point">
+            <div style="margin-top: -10px;" class="icon"><img src="images/Experienced Teachers.png" alt="Experienced Teachers"></div>
+            <div class="text"><strong>অভিজ্ঞ শিক্ষক:</strong> শিল্পক্ষেত্রে অভিজ্ঞ শিক্ষকরা বাস্তবমুখী প্রজেক্টের মাধ্যমে শিক্ষার্থীদের দিকনির্দেশনা প্রদান করেন।</div>
+          </div>
+          <div style="margin: 20px;" class="point">
+            <div style="margin-top: -10px;" class="icon"><img src="images/carrer-support.png" alt="Career Support"></div>
+            <div class="text"><strong>ক্যারিয়ার সাপোর্ট:</strong> ইন্টার্নশিপ সুযোগ, ক্যারিয়ার গাইডেন্স এবং প্লেসমেন্ট সহায়তা প্রতিটি শিক্ষার্থীর জন্য নিশ্চিত।</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+<!-- Stats Section -->
+<section id="stats" class="stats">
+  <div class="container">
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <h2>0<span></span></h2>
+        <p>Alumni</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>10<span>+</span></h2>
+        <p>Teachers</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>5<span>+</span></h2>
+        <p>Courses</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>0<span></span></h2>
+        <p>Awards</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Teachers & Leadership Section -->
+<section id="faculty-section" class="faculty-section">
+  <div class="container">
+    <h2>Our Teachers & Leadership</h2>
+
+    <div class="faculty-grid">
+      <!-- Profile 1 -->
+      <div class="faculty-card">
+        <img src="images/teachers/tofajjal.png" alt="Principal">
+        <h3>Md. Tofajjal Hossen</h3>
+        <p>Founder and Principal</p>
+        <p>B.Sc. in (EEE), Diploma in (Electrical Technology)</p>
+        <div class="faculty-social-links">
+          <a href="#"><img src="images/Icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/Icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+      <!-- Profile 2 -->
+      <div class="faculty-card">
+        <img src="images/teachers/Md. Hafizur Rahman.png" alt="Director">
+        <h3>Md. Hafizur Rahman</h3>
+        <p>Director</p>
+        <p>Diploma in Automobile</p>
+        <div class="faculty-social-links">
+          <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+      <!-- Profile 3 -->
+      <div class="faculty-card">
+        <img src="images/teachers/unnamed.png" alt="Teacher 1">
+        <h3>Md. Juwel Miah</h3>
+        <p>Chief Instructor (Non-Tech, Math)</p>
+        <p>BBA/MBA in Accounting</p>
+        <div class="faculty-social-links">
+          <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+      <!-- Profile 4 -->
+      <div class="faculty-card">
+        <img src="images/teachers/Sharif_Uddin.jpg" alt="Teacher 2">
+        <h3>Sharif Uddin</h3>
+        <p>Chief instructor, Department of Computer Science & Technology</p>
+        <p>B.Sc. in (CSE), Diploma in (CST)</p>
+        <div class="faculty-social-links">
+          <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+      <!-- Profile 5 -->
+      <div class="faculty-card">
+        <img src="images/teachers/arif.jpg" alt="Teacher 3">
+        <h3>Ariful Islam</h3>
+        <p>Chief Instructor, Department of Civil Technology</p>
+        <p>B.Sc. in Physics (Present), Diploma in (Surveying)</p>
+        <div class="faculty-social-links">
+          <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+   <!-- Profile 8 -->
+      <div class="faculty-card">
+        <img src="images/teachers/MD. MASUDUR RAHMAN.png" alt="Teacher 6">
+        <h3>Md. Masudur Rahman</h3>
+        <p>Instructor, (Non-Tech, English)</p>
+        <p>BA/MA in English</p>
+        <div class="faculty-social-links">
+          <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+
+      
+      <!-- Profile 7 -->
+      <div class="faculty-card">
+        <img src="images/teachers/jubayer.png" alt="Teacher 5">
+        <h3>Md. Jobayer Hossain</h3>
+        <p>Junior Instructor, Department of Electrical Technology</p>
+        <p>B.Sc. in EEE (Present), Diploma (Electrical Technology)</p>
+        <div class="faculty-social-links">
+          <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+   
+<!-- Profile 6 -->
+      <div class="faculty-card">
+        <img src="images/teachers/forhat.png" alt="Teacher 4">
+        <h3>Forhat Hossain</h3>
+        <p>Public Relation Officer</p>
+        <p>Diploma in Computer Science & Technology</p>
+        <div class="faculty-social-links">
+          <a href="#"><img src="images/icons/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/icons/linkedin.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- testimonial -->
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial-track">
+
+        <!-- Student 1 -->
+        <div class="testimonial-card">
+          <img src="images/Students/9.jpg" alt="Student 1">
+          <p>"এখানে শিক্ষার পরিবেশ সত্যিই প্রশংসনীয়। আধুনিক সুবিধা আর ব্যবহারিক শিক্ষার মাধ্যমে আমি বাস্তব জীবনের কাজে প্রয়োগযোগ্য মূল্যবান দক্ষতা অর্জন করেছি।"</p>
+          <h3>Md. Jihad Mia</h3>
+          <span>Computer Science & Technology</span>
+        </div>
+
+        <!-- Student 2 -->
+        <div class="testimonial-card">
+          <img src="images/Students/11.jpg" alt="Student 2">
+          <p>"আমি বৃত্তি প্রোগ্রাম এবং বিনামূল্যের সুযোগ-সুবিধাগুলো খুবই পছন্দ করেছি। এগুলো আমাকে সম্পূর্ণ মনোযোগ দিয়ে পড়াশোনায় মনোনিবেশ করতে অনুপ্রাণিত করেছে।"</p>
+          <h3>Sabbir Mia</h3>
+          <span>Computer Science & Technology</span>
+        </div>
+
+        <!-- Student 3 -->
+        <div class="testimonial-card">
+          <img src="images/Students/3.jpg" alt="Student 3">
+          <p>"শিক্ষকরা অনেক সহায়ক, আর ব্যবহারিক শিক্ষার পদ্ধতি আমার ক্যারিয়ারে উৎকর্ষ অর্জনে বিশেষভাবে সহায়তা করেছে।"</p>
+          <h3>Humaira Akter</h3>
+          <span>Computer Science & Technology</span>
+        </div>
+
+        <!-- Student 4 -->
+        <div class="testimonial-card">
+          <img src="images/Students/14.jpg" alt="Student 4">
+          <p>"বিনামূল্যে টিউশন ও বৃত্তির সহায়তা আমি সত্যিই প্রশংসা করি। এর ফলে পড়াশোনা হয়েছে নির্ভার এবং আনন্দময়।"</p>
+          <h3>Jannatul Ferpdous</h3>
+          <span>Computer Science & Technology</span>
+        </div>
+
+        <!-- Student 5 -->
+        <div class="testimonial-card">
+          <img src="images/Students/13.jpg" alt="Student 5">
+          <p>"আধুনিক সুযোগ-সুবিধা ও রিসোর্সগুলো আমার একাডেমিক লক্ষ্য অর্জনে কার্যকরভাবে সহায়তা করেছে।"</p>
+          <h3>Md. Bijoy Hossain</h3>
+          <span>Computer Science & Technology</span>
+        </div>
+
+        <!-- Student 6 -->
+        <div class="testimonial-card">
+          <img src="images/Students/15.jpg" alt="Student 6">
+          <p>"এই প্রতিষ্ঠানে সিভিল টেকনোলজি শিখে আমি ব্যবহারিক জ্ঞান অর্জন করেছি, যা বাস্তব প্রকল্পে কাজ করার আত্মবিশ্বাস জুগিয়েছে।"</p>
+          <h3>Turjo Das</h3>
+          <span>Civil Technology</span>
+        </div>
+
+        <!-- Student 7 -->
+        <div class="testimonial-card">
+          <img src="images/Students/5.jpg" alt="Student 7">
+          <p>"স্কলারশিপ ও টিউশন-ফ্রি সুবিধা আমার পড়াশোনাকে একেবারে চাপমুক্ত করেছে এবং মনোযোগী থাকতে সহায়তা করেছে।"</p>
+          <h3>Dip Ahmed</h3>
+          <span>Electrical Technology</span>
+        </div>
+
+        <!-- Student 8 -->
+        <div class="testimonial-card">
+          <img src="images/Students/10.jpg" alt="Student 8">
+          <p>"ইন্টারঅ্যাকটিভ শেখার পরিবেশ এবং অভিজ্ঞ শিক্ষকদের দিকনির্দেশনা আমার কাছে সত্যিই অনুপ্রেরণাদায়ক ছিল।"</p>
+          <h3>Md. Siyam Mia</h3>
+          <span>Civil Technology</span>
+        </div>
+
+        <!-- Student 9 -->
+        <div class="testimonial-card">
+          <img src="images/Students/6.jpg" alt="Student 9">
+          <p>"স্টাফদের সহায়তা ও আধুনিক রিসোর্স আমাকে আমার প্রকল্পগুলো দক্ষতার সাথে সম্পন্ন করতে সাহায্য করেছে।"</p>
+          <h3>Anika Akter</h3>
+          <span>Computer Science & Technology</span>
+        </div>
+
+        <!-- Student 10 -->
+        <div class="testimonial-card">
+          <img src="images/Students/18.jpg" alt="Student 10">
+          <p>"বিনামূল্যের শিক্ষাদান ও স্কলারশিপের কারণে আমি কোনও চিন্তা ছাড়াই সম্পূর্ণভাবে শিক্ষায় মনোযোগ দিতে পেরেছি।"</p>
+          <h3>Md. Badhon Prodhan</h3>
+          <span>Electrical Technology</span>
+        </div>
+
+        <!-- Student 11 -->
+        <div class="testimonial-card">
+          <img src="images/Students/17.jpg" alt="Student 11">
+          <p>"বিদ্যুৎ ব্যবস্থাপনা ও বাস্তব জীবনের প্রয়োগে আমি ব্যবহারিক জ্ঞান অর্জন করেছি।"</p>
+          <h3>Md. Gihad Miah</h3>
+          <span>Electrical Technology</span>
+        </div>
+
+        <!-- Student 12 -->
+        <div class="testimonial-card">
+          <img src="images/Students/7.jpg" alt="Student 12">
+          <p>"বিনামূল্যের শিক্ষা সামগ্রী এবং লাইব্রেরির সুবিধা আমার দক্ষতা উন্নত করতে অনেক সাহায্য করেছে।"</p>
+          <h3>Md. Anik Islam</h3>
+          <span>Civil Technology</span>
+        </div>
+
+        <!-- Student 13 -->
+        <div class="testimonial-card">
+          <img src="images/Students/8.jpg" alt="Student 13">
+          <p>"সহায়ক পরিবেশ এবং ব্যবহারিক শিক্ষার ওপর জোর দেওয়াটা আমি খুবই পছন্দ করেছি।"</p>
+          <h3>Asif Ali</h3>
+          <span>Computer Science & Technology</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container contact-container">
+    <h2>Contact Us</h2>
+    <div class="contact-grid">
+      <!-- Contact Form Left -->
+      <div class="contact-form">
+        <form action="contact-form.php" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="info@rpi.edu.bd" required>
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Details Right -->
+      <div class="contact-details">
+        <p><strong>Address:</strong> <br> Residential Polytechnic Institute, Baniajuri, Manikganj</p>
+        <p><strong>Phone:</strong> +880 1708197154, +880 1686795784</p>
+        <p><strong>Email:</strong> info@rpi.edu.bd</p>
+        <p>ভর্তিসংক্রান্ত, কোর্স বা বৃত্তি সংক্রান্ত যেকোনো প্রশ্নের জন্য আমাদের সাথে যোগাযোগ করতে বিনা দ্বিধায় যোগাযোগ করুন। আমরা সবসময় সাহায্যের জন্য প্রস্তুত।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    
+    <!-- Logo & Description -->
+    <div class="footer-brand">
+      <a href="index.html" class="image-button">
+  <img src="images/Resdential Polytechnic Instiute.png" alt="Institute Logo" width="80">
+</a>
+
+      <h2 style="text-align: left; font-size: 20px;">Resdential Polytechnic Institute</h2>
+      <p>Empowering students with modern skills, scholarships, and practical learning to succeed in life.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="departments/departments.html">Departments</a></li>
+        <li><a href="facilities/facilities.html">Facilities</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#why-choose-us">Why Choose Us</a></li>
+        <li><a href="contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Khadija-Harun Vaban, Baniajuri, Ghior, Manikganj.</p>
+      <p>Email: info@rpi.edu.bd</p>
+      <p>Phone: +880 1708197154, <br>  +880 1686795784</p>
+    
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h3>Newsletter</h3>
+      <p>Subscribe to receive updates, scholarships, and news.</p>
+      <form>
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61575094591937"><img src="images/Icons/facebook.png" alt="Facebook"></a>
+        <a href="https://www.facebook.com/profile.php?id=61575094591937"><img src="images/Icons/twitter.png" alt="Twitter"></a>
+        <a href="https://www.facebook.com/profile.php?id=61575094591937"><img src="images/Icons/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/residentialpolytechnic2025/"><img src="images/Icons/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Residential Polytechnic Institute. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

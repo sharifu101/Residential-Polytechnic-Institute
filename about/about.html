@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Residential Polytechnic Institute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../images/android-chrome-192x192.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #004c97;
+      color: #fff;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 15px;
+      font-style: italic;
+    }
+    .nav-links a:hover {
+      background-color: #003366;
+      border-radius: 4px;
+    }
+
+    /* Hero */
+    .about__hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg,#eb9090,#5798da);
+      color: #fff;
+    }
+    .about__hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    .about__hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Sections */
+    .about__section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+    .about__section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #004c97;
+      margin-bottom: 40px;
+    }
+    .split {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+    .split img {
+      flex: 1 1 40%;
+      border-radius: 12px;
+      max-width: 100%;
+      object-fit: cover;
+    }
+    .split div {
+      flex: 1 1 55%;
+    }
+
+    /* Grid Cards */
+    .about__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 30px;
+    }
+    .about__card {
+      background:#fff;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+    .about__card h3 { color:#004c97; margin-bottom:10px; }
+
+    /* Teachers */
+    .faculty-section {
+      padding: 80px 20px;
+      background: #f8faff;
+    }
+    .faculty-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #004c97;
+      font-weight: 700;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    .faculty-section h2::after {
+      content: "";
+      display: block;
+      width: 30%;
+      height: 4px;
+      background: linear-gradient(90deg, #004c97, #1e90ff);
+      margin: 10px auto 0;
+      border-radius: 4px;
+    }
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+    @media (max-width: 1200px) {
+      .faculty-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 992px) {
+      .faculty-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .faculty-grid { grid-template-columns: 1fr; }
+    }
+    .faculty-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .faculty-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+    .faculty-card img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid #004c97;
+      padding: 5px;
+      background: #e6f0ff;
+    }
+    .faculty-card h3 {
+      font-size: 1.3rem;
+      color: #004c97;
+      margin-bottom: 5px;
+    }
+    .faculty-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .faculty-social-links a {
+      display: inline-block;
+      margin: 0 5px;
+    }
+    .faculty-social-links img {
+      width: 28px;
+      height: 28px;
+      transition: transform 0.3s;
+    }
+    .faculty-social-links a:hover img {
+      transform: scale(1.2);
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #004c97;
+      color: #fff;
+      padding: 60px 20px 20px;
+    }
+    .site-footer a { color:#fff; text-decoration:none; }
+    .site-footer a:hover { color:#ffcc00; }
+    .footer-top {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+    .footer-bottom {
+      text-align:center;
+      padding:20px 0;
+      border-top:1px solid rgba(255,255,255,0.2);
+      font-size:0.9rem;
+    }
+
+
+    .footer-newsletter p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-newsletter form {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.footer-newsletter input[type="email"] {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  border: none;
+  background: #ffcc00;
+  color: #004c97;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 6px 6px 0;
+  transition: background 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background: #e6b800;
+}
+
+
+.nav-links a.active {
+  background-color: #ffcc00; /* Highlight color */
+  color: #004c97; /* Text color */
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+  </style>
+</head>
+<body>
+
+ <!-- Header -->
+<header style="background-color:#004c97; color:#fff; position:fixed; top:0; left:0; width:100%; z-index:1000;">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding:20px; max-width:1200px; margin:auto;">
+
+    <!-- Logo -->
+    <a class="logo" href="../index.html">
+  <img src="../images/Resdential Polytechnic Instiute.png" width="90" alt="Institute Logo">
+</a>
+
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav-links" style="list-style:none; display:flex; margin:0; padding:0;">
+        <li><a href="../index.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Home</a></li>
+        <li><a href="../about/about.html" class="active" style="color:#004c97; background:#ffcc00; padding:5px 10px; text-decoration:none; border-radius:4px; font-style:italic; font-weight:bold;">About Us</a></li>
+        <li><a href="../departments/departments.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Departments</a></li>
+        <li><a href="../facilities/facilities.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Facilities</a></li>
+        <li><a href="../tution-fee/tution-fee.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Tuition Fee</a></li>
+        <li><a href="../contact/contact.html" style="color:#fff; padding:5px 10px; text-decoration:none; font-style:italic;">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" style="font-size:28px; cursor:pointer; display:none; color:#fff;">&#9776;</div>
+  </div>
+</header>
+
+<!-- JavaScript for Responsive Menu -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    if(navLinks.style.display === 'flex' && window.innerWidth <= 768){
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '20px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    }
+  });
+
+  function resizeNav() {
+    if(window.innerWidth <= 768){
+      document.querySelector('.menu-toggle').style.display = 'block';
+      navLinks.style.display = 'none';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.position = 'absolute';
+      navLinks.style.top = '70px';
+      navLinks.style.right = '20px';
+      navLinks.style.backgroundColor = '#004c97';
+      navLinks.style.width = '200px';
+      navLinks.style.borderRadius = '8px';
+      navLinks.style.padding = '10px 0';
+    } else {
+      document.querySelector('.menu-toggle').style.display = 'none';
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'row';
+      navLinks.style.position = 'static';
+      navLinks.style.width = 'auto';
+      navLinks.style.backgroundColor = 'transparent';
+      navLinks.style.padding = '0';
+    }
+  }
+
+  window.addEventListener('resize', resizeNav);
+  window.addEventListener('load', resizeNav);
+</script>
+
+
+  <!-- Hero -->
+  <section style="margin-top: 100px;" class="about__hero">
+    <h1>About Us</h1>
+    <p>Shaping the future through technical education, innovation, and skill development.</p>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="about__section">
+    <h2>Who We Are</h2>
+    <div class="split">
+      <img style="width: 120px;" src="../images/who-we-are.png" alt="Our Campus">
+      <div>
+        <p><strong style="font-style: italic; font-size: 16;">Residential Polytechnic Institute </strong> একটি অগ্রণী প্রযুক্তিগত প্রতিষ্ঠান, যা বিভিন্ন ইঞ্জিনিয়ারিং ও প্রযুক্তি ক্ষেত্রে মানসম্মত শিক্ষা এবং ব্যবহারিক প্রশিক্ষণ প্রদানের জন্য নিবেদিত। আমাদের লক্ষ্য শিক্ষার্থীদের হাতে-কলমে দক্ষতা অর্জনে সক্ষম করা এবং আধুনিক বিশ্বের চ্যালেঞ্জ মোকাবেলায় সফল ক্যারিয়ারের জন্য প্রস্তুত করা।
+
+অভিজ্ঞ শিক্ষক, আধুনিক ল্যাব এবং শিল্পভিত্তিক প্রশিক্ষণের মাধ্যমে আমরা উদ্ভাবন ও সৃজনশীলতাকে উৎসাহিত করি, পাশাপাশি শৃঙ্খলা এবং নেতৃত্বের মূল্যবোধকে প্রাধান্য দিই।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="about__section">
+    <h2>Our Mission, Vision & Values</h2>
+    <div class="about__grid">
+      <div class="about__card">
+        <img src="../images/mission.png" alt="Mission" style="width:100%; border-radius:8px; margin-bottom:15px;">
+        <h3>Mission</h3>
+        <p>শিক্ষার্থীদের উচ্চমানের প্রযুক্তিগত শিক্ষা প্রদান করা এবং ব্যবহারিক জ্ঞান দিয়ে তাদের সক্ষম করে তোলা।</p>
+      </div>
+      <div class="about__card">
+        <img src="../images/vission.png" alt="Vision" style="width:100%; border-radius:8px; margin-bottom:15px;">
+        <h3>Vision</h3>
+        <p>পলিটেকনিক শিক্ষায় উৎকর্ষতার কেন্দ্র হিসেবে স্বীকৃত হওয়া এবং ভবিষ্যতের পেশাজীবীদের প্রস্তুত করা।</p>
+      </div>
+      <div class="about__card">
+        <img src="../images/Values.png" alt="Values" style="width:100%; border-radius:8px; margin-bottom:15px;">
+        <h3>Values</h3>
+        <p>অখণ্ডতা, উদ্ভাবন, অন্তর্ভুক্তি, এবং আজীবন শেখার মান আমাদের শিক্ষাদানের মূল ভিত্তি।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Journey -->
+  <section class="about__section">
+    <h2>Our Journey</h2>
+    <div class="split">
+      <div>
+        <p>দক্ষ জনশক্তি গড়ে তোলার লক্ষ্য নিয়ে প্রতিষ্ঠিত, <strong style="font-size: 18; font-style: italic;">Residential Polytechnic Institute</strong> ধীরে ধীরে উন্নতি করে এসেছে। সাধারণভাবে শুরু হলেও আজ আমরা বহু প্রযুক্তিগত বিভাগ, আধুনিক অবকাঠামো এবং শিল্প-প্রস্তুত স্নাতক উৎপাদনের জন্য একটি শক্তিশালী খ্যাতি অর্জন করেছি।
+
+আমাদের প্রাক্তন শিক্ষার্থীরা জাতীয় ও আন্তর্জাতিক শিল্পে গুরুত্বপূর্ণ অবদান রেখে, প্রতিষ্ঠানটিকে গৌরব ও স্বীকৃতি প্রদান করছে।</p>
+      </div>
+      <img style="width: 120px;" src="/RPI/images/journey.png" alt="Our History">
+    </div>
+  </section>
+
+  
+  
+  <!-- Teachers & Leadership Section -->
+<section id="faculty-section" style="padding:80px 20px; background:#f8faff;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <h2 style="text-align:center; font-size:2.5rem; color:#004c97; font-weight:700; margin-bottom:50px; position:relative;">
+      Our Teachers & Leadership
+      <span style="display:block; width:30%; height:4px; background:linear-gradient(90deg,#004c97,#1e90ff); margin:10px auto 0; border-radius:4px;"></span>
+    </h2>
+
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:30px;">
+
+      <!-- Profile 1 -->
+      <div style="background:#fff; border-radius:12px; padding:25px 20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s;">
+        <img src="../images/teachers/tofajjal.png" alt="Principal" style="width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:15px; border:4px solid #004c97; padding:5px; background:#e6f0ff;">
+        <h3 style="font-size:1.3rem; color:#004c97; margin-bottom:5px;">Md. Tofajjal Hossen</h3>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">Founder and Principal</p>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">B.Sc. in (EEE), Diploma in (Electrical Technology)</p>
+        <div style="margin-top:10px;">
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/facebook.png" alt="Facebook" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/twitter.png" alt="Twitter" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/linkedin.png" alt="LinkedIn" style="width:28px; height:28px;"></a>
+        </div>
+      </div>
+
+      <!-- Profile 2 -->
+      <div style="background:#fff; border-radius:12px; padding:25px 20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s;">
+        <img src="../images/teachers/Md. Hafizur Rahman.png" alt="Director" style="width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:15px; border:4px solid #004c97; padding:5px; background:#e6f0ff;">
+        <h3 style="font-size:1.3rem; color:#004c97; margin-bottom:5px;">Md. Hafizur Rahman</h3>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">Director</p>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">Diploma in Automobile</p>
+        <div style="margin-top:10px;">
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/facebook.png" alt="Facebook" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/twitter.png" alt="Twitter" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/linkedin.png" alt="LinkedIn" style="width:28px; height:28px;"></a>
+        </div>
+      </div>
+
+      <!-- Profile 3 -->
+      <div style="background:#fff; border-radius:12px; padding:25px 20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s;">
+        <img src="../images/teachers/unnamed.png" alt="Teacher 1" style="width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:15px; border:4px solid #004c97; padding:5px; background:#e6f0ff;">
+        <h3 style="font-size:1.3rem; color:#004c97; margin-bottom:5px;">Md. Jowel Miah</h3>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">Chief Instructor (Non-Tech)</p>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">BBA/MBA in Accounting</p>
+        <div style="margin-top:10px;">
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/facebook.png" alt="Facebook" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/twitter.png" alt="Twitter" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/linkedin.png" alt="LinkedIn" style="width:28px; height:28px;"></a>
+        </div>
+      </div>
+
+      <!-- Profile 4 -->
+      <div style="background:#fff; border-radius:12px; padding:25px 20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s;">
+        <img src="../images/teachers/Sharif_Uddin.jpg" alt="Teacher 2" style="width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:15px; border:4px solid #004c97; padding:5px; background:#e6f0ff;">
+        <h3 style="font-size:1.3rem; color:#004c97; margin-bottom:5px;">Sharif Uddin</h3>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">Chief Instructor, Dept. of Computer Science & Technology</p>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">B.Sc. in (CSE), Diploma in (CST)</p>
+        <div style="margin-top:10px;">
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/facebook.png" alt="Facebook" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/twitter.png" alt="Twitter" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/linkedin.png" alt="LinkedIn" style="width:28px; height:28px;"></a>
+        </div>
+      </div>
+
+      <!-- Profile 5 -->
+      <div style="background:#fff; border-radius:12px; padding:25px 20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s;">
+        <img src="../images/teachers/arif.jpg" alt="Teacher 3" style="width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:15px; border:4px solid #004c97; padding:5px; background:#e6f0ff;">
+        <h3 style="font-size:1.3rem; color:#004c97; margin-bottom:5px;">Ariful Islam</h3>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">Chief Instructor, Dept. of Civil Technology</p>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">B.Sc. in Physics (Present), Diploma in (Surveying)</p>
+        <div style="margin-top:10px;">
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/facebook.png" alt="Facebook" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/twitter.png" alt="Twitter" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/linkedin.png" alt="LinkedIn" style="width:28px; height:28px;"></a>
+        </div>
+      </div>
+
+      
+
+
+      <!-- Profile 8 -->
+      <div style="background:#fff; border-radius:12px; padding:25px 20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s;">
+        <img src="../images/teachers/MD. MASUDUR RAHMAN.png" alt="Teacher 6" style="width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:15px; border:4px solid #004c97; padding:5px; background:#e6f0ff;">
+        <h3 style="font-size:1.3rem; color:#004c97; margin-bottom:5px;">Md. Masudur Rahman</h3>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">Instructor (Non-Tech, English)</p>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">BA/MA in English</p>
+        <div style="margin-top:10px;">
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/icons/facebook.png" alt="Facebook" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/icons/twitter.png" alt="Twitter" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/icons/linkedin.png" alt="LinkedIn" style="width:28px; height:28px;"></a>
+        </div>
+      </div>
+
+
+
+      <!-- Profile 7 -->
+      <div style="background:#fff; border-radius:12px; padding:25px 20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s;">
+        <img src="../images/teachers/jubayer.png" alt="Teacher 5" style="width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:15px; border:4px solid #004c97; padding:5px; background:#e6f0ff;">
+        <h3 style="font-size:1.3rem; color:#004c97; margin-bottom:5px;">Md. Jobayer Hossain</h3>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">Junior Instructor, Dept. of Electrical Technology</p>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">B.Sc. in EEE (Present), Diploma (Electrical Technology)</p>
+        <div style="margin-top:10px;">
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/icons/facebook.png" alt="Facebook" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/icons/twitter.png" alt="Twitter" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/icons/linkedin.png" alt="LinkedIn" style="width:28px; height:28px;"></a>
+        </div>
+      </div>
+
+
+
+<!-- Profile 6 -->
+      <div style="background:#fff; border-radius:12px; padding:25px 20px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s;">
+        <img src="../images/teachers/forhat.png" alt="Teacher 4" style="width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:15px; border:4px solid #004c97; padding:5px; background:#e6f0ff;">
+        <h3 style="font-size:1.3rem; color:#004c97; margin-bottom:5px;">Forhat Hossain</h3>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">Public Relation Officer</p>
+        <p style="font-size:0.95rem; color:#555; margin-bottom:10px;">Diploma in Computer Science & Technology</p>
+        <div style="margin-top:10px;">
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/facebook.png" alt="Facebook" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/twitter.png" alt="Twitter" style="width:28px; height:28px;"></a>
+          <a href="#" style="display:inline-block; margin:0 5px;"><img src="../images/Icons/linkedin.png" alt="LinkedIn" style="width:28px; height:28px;"></a>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- FAQ Section -->
+<section id="faq-section" style="padding:80px 20px; background:#f0f8ff;">
+  <div style="max-width:900px; margin:0 auto;">
+    <h2 style="text-align:center; font-size:2.5rem; color:#004c97; font-weight:700; margin-bottom:50px; position:relative;">
+      প্রায়শই জিজ্ঞাসিত প্রশ্নসমূহ
+      <span style="display:block; width:30%; height:4px; background:linear-gradient(90deg,#004c97,#1e90ff); margin:10px auto 0; border-radius:4px;"></span>
+    </h2>
+
+    <!-- FAQ Items -->
+    <div style="display:flex; flex-direction:column; gap:15px;">
+
+      <!-- FAQ 1 -->
+      <div style="background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.08);">
+        <button class="faq-btn" style="width:100%; text-align:left; padding:20px; font-size:1.2rem; color:#004c97; border:none; background:none; cursor:pointer;">
+          প্রশ্ন ১: আমি কীভাবে ভর্তি হতে পারি?
+        </button>
+        <div class="faq-content" style="padding:0 20px; max-height:0; overflow:hidden; transition:max-height 0.3s ease; font-size:1rem; color:#555; line-height:1.6;">
+          উত্তর: ভর্তি হতে হলে আমাদের অফিসে সরাসরি যোগাযোগ করুন অথবা অনলাইন ফর্ম পূরণ করুন।
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div style="background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.08);">
+        <button class="faq-btn" style="width:100%; text-align:left; padding:20px; font-size:1.2rem; color:#004c97; border:none; background:none; cursor:pointer;">
+          প্রশ্ন ২: কোর্সের মেয়াদ কত?
+        </button>
+        <div class="faq-content" style="padding:0 20px; max-height:0; overflow:hidden; transition:max-height 0.3s ease; font-size:1rem; color:#555; line-height:1.6;">
+          উত্তর: আমাদের কোর্সের মেয়াদ ৪ বছর। কিন্তু সর্ট কোর্সের ক্ষেত্রে ৩ মাস থেকে ১ বছর পর্যন্ত হয়।
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div style="background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.08);">
+        <button class="faq-btn" style="width:100%; text-align:left; padding:20px; font-size:1.2rem; color:#004c97; border:none; background:none; cursor:pointer;">
+          প্রশ্ন ৩: কি ধরনের সার্টিফিকেট প্রদান করা হয়?
+        </button>
+        <div class="faq-content" style="padding:0 20px; max-height:0; overflow:hidden; transition:max-height 0.3s ease; font-size:1rem; color:#555; line-height:1.6;">
+          উত্তর: ডিপ্লোমা কোর্স সমাপ্তির পর সরকারী স্বীকৃত BTEB সার্টিফিকেট প্রদান করা হয়। ছোট কোর্সের ক্ষেত্রে প্রতিষ্ঠান থেকে সার্টিফিকেট প্রদান করা হয়।
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div style="background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.08);">
+        <button class="faq-btn" style="width:100%; text-align:left; padding:20px; font-size:1.2rem; color:#004c97; border:none; background:none; cursor:pointer;">
+          প্রশ্ন ৪: ফি কিভাবে পরিশোধ করতে হয়?
+        </button>
+        <div class="faq-content" style="padding:0 20px; max-height:0; overflow:hidden; transition:max-height 0.3s ease; font-size:1rem; color:#555; line-height:1.6;">
+          উত্তর: আপনি হ্যান্ডক্যাশ, নগদ, বিকাশ, ব্যাংক ট্রান্সফারের মাধ্যমে ফি পরিশোধ করতে পারবেন।
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div style="background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.08);">
+        <button class="faq-btn" style="width:100%; text-align:left; padding:20px; font-size:1.2rem; color:#004c97; border:none; background:none; cursor:pointer;">
+          প্রশ্ন ৫: কোর্সের সময়সূচি কি?
+        </button>
+        <div class="faq-content" style="padding:0 20px; max-height:0; overflow:hidden; transition:max-height 0.3s ease; font-size:1rem; color:#555; line-height:1.6;">
+          উত্তর: ডিপ্লোমা সপ্তাহে ৫ দিন অনষ্ঠিত হয়। এবং সর্ট কোর্স সাধারণত সপ্তাহে ৩ দিন, প্রতিদিন ২ ঘণ্টা করে অনুষ্ঠিত হয়।
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for Collapse -->
+<script>
+  const faqButtons = document.querySelectorAll(".faq-btn");
+  faqButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      if(content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        // close all other open FAQs
+        document.querySelectorAll(".faq-content").forEach(c => c.style.maxHeight = null);
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+<!-- Contact Section -->
+<section id="contact-section" style="padding:80px 20px; background:linear-gradient(135deg, #f6f9fc 0%, #e9eef3 100%); color:#ffffff;">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <h2 style="text-align:center; font-size:2.5rem; margin-bottom:50px; font-weight:700; position:relative; color:#004c97; display:inline-block; width:100%;">
+      আমাদের সাথে যোগাযোগ করুন
+      <span style="display:block; width:100%; height:4px; background:#ffcc00; margin:10px auto 0; border-radius:4px;"></span>
+    </h2>
+
+    <!-- Flex container for form and details -->
+    <div style="display:flex; flex-wrap:wrap; gap:50px; align-items:flex-start; justify-content:center;">
+
+      <!-- Contact Form Left -->
+      <div style="flex:1 1 45%; background:#ffffff; color:#333; padding:40px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
+        <form action="contact-form.php" method="post">
+          <input type="text" name="user_name" placeholder="আপনার নাম" required 
+            style="width:100%; padding:15px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc; font-size:1rem; transition:all 0.3s ease;">
+          <input type="email" name="user_email" placeholder="info@rpi.edu.bd" required
+            style="width:100%; padding:15px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc; font-size:1rem; transition:all 0.3s ease;">
+          <textarea name="user_message" rows="6" placeholder="আপনার বার্তা" required
+            style="width:100%; padding:15px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc; font-size:1rem; transition:all 0.3s ease;"></textarea>
+          <button type="submit" 
+            style="background-color:#004c97; color:#fff; padding:15px 35px; border:none; border-radius:8px; cursor:pointer; font-size:1.1rem; font-weight:600; transition:all 0.3s ease;">
+            বার্তা পাঠান
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Details Right -->
+      <div style="flex:1 1 45%; font-size:1rem; color:#004c97; line-height:1.8;">
+        <p><strong>Addres</strong> <br> Residential Polytechnic Institute, Baniajuri, Ghior, Manikganj</p>
+        <p><strong>Phone:</strong> +880 1708197154, <br>  +880 1686795784</p>
+        <p><strong>Email:</strong> info@rpi.edu.bd</p>
+        <p>ভর্তিসংক্রান্ত, কোর্স বা বৃত্তি সংক্রান্ত যেকোনো প্রশ্নের জন্য আমাদের সাথে যোগাযোগ করতে বিনা দ্বিধায় যোগাযোগ করুন। আমরা সবসময় সাহায্যের জন্য প্রস্তুত।</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html"><img src="../images/Resdential Polytechnic Instiute.png" alt="Institute Logo" width="80"></a>
+        <h2>Resdential Polytechnic Institute</h2>
+        <p>Empowering students with modern skills, scholarships, and practical learning to succeed in life.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../departments/departments.html">Departments</a></li>
+          <li><a href="../facilities/facilities.html">Facilities</a></li>
+          <li><a href="../index.html#testimonials">Testimonials</a></li>
+          <li><a href="../index.html#why-choose-us">Why Choose Us</a></li>
+          <li><a href="../contact/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Khadija-Harun Vaban, Baniajuri, Ghior, Manikganj.</p>
+        <p>Email: info@rpi.edu.bd</p>
+        <p>Phone: +880 1708197154, +880 1686795784</p>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe to receive updates, scholarships, and news.</p>
+        <form action="contact-form.php" method="post">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-icons">
+  <a href="https://www.facebook.com/profile.php?id=61575094591937" style="display:inline-block; margin-right:10px;">
+    <img src="../images/Icons/facebook.png" alt="Facebook" style="width:28px; height:28px;">
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61575094591937" style="display:inline-block; margin-right:10px;">
+    <img src="../images/Icons/twitter.png" alt="Twitter" style="width:28px; height:28px;">
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61575094591937" style="display:inline-block; margin-right:10px;">
+    <img src="../images/Icons/linkedin.png" alt="LinkedIn" style="width:28px; height:28px;">
+  </a>
+  <a href="https://www.instagram.com/residentialpolytechnic2025/" style="display:inline-block; margin-right:10px;">
+    <img src="../images/Icons/instagram.png" alt="Instagram" style="width:28px; height:28px;">
+  </a>
+</div>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Residential Polytechnic Institute. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
